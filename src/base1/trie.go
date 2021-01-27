@@ -14,6 +14,7 @@ func (n *node) matchChild(part string) *node {
 			return child
 		}
 	}
+
 	return nil
 }
 

@@ -6,9 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="357caa9f-e34f-4c10-97d0-cb754dee05c3" name="Default Changelist" comment="add context">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base1/trie.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base1/trie.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base1/trie.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,12 @@
   </component>
   <component name="GOROOT" path="E:\Go" />
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubPullRequestsUISettings">
@@ -245,9 +250,13 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="646" y="343" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1611675638399" />
-    <state x="2364" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611714609344">
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2" timestamp="1611715256347">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2364" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611714609344" />
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611715256347" />
+    <state x="2364" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611714667270">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2364" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611714667270" />
   </component>
 </project>
