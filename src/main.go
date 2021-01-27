@@ -1,18 +1,20 @@
 package main
 
 import (
-	"base1"
+	"GeeWeb"
 	"net/http"
 )
 
 func main() {
-	r := base1.New()
-	r.GET("/", func(c *base1.Context) {
+	r := GeeWeb.New()
+	r.GET("/", func(c *GeeWeb.Context) {
 		c.HTML(http.StatusOK, "<h1>Hello Gee</h1>")
 	})
-	r.GET("/hello", func(c *base1.Context) {
+	r.GET("/hello", func(c *GeeWeb.Context) {
 		c.String(http.StatusOK, "hello %s, you're at %s\n", c.Query("name"), c.Path)
 	})
-	r.Run(":8080")
-
+	err := r.Run(":8080")
+	if err != nil {
+		panic(err)
+	}
 }
