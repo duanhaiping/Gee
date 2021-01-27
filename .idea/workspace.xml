@@ -5,9 +5,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="357caa9f-e34f-4c10-97d0-cb754dee05c3" name="Default Changelist" comment="">
+    <list default="true" id="357caa9f-e34f-4c10-97d0-cb754dee05c3" name="Default Changelist" comment="add context">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/base1/trie.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,13 @@
   <component name="GOROOT" path="E:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/duanhaiping/Gee" />
+      </set>
+    </option>
   </component>
   <component name="GoDepProject">
     <integration-enabled>true</integration-enabled>
@@ -145,11 +153,32 @@
         </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="TEXT_FILTER_SETTINGS">
+                <TextFilterSettings>
+                  <option name="MATCH_CASE" value="true" />
+                </TextFilterSettings>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add context" />
+    <option name="LAST_COMMIT_MESSAGE" value="add context" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2014" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611561573444">
@@ -172,26 +201,26 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2371" y="438" key="Github.CreateGistDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611655069087" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1611675337283">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1611675838399">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611658211575" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1611675337283" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1611675337283">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1611675838399" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1611675838399">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611658211575" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1611675337283" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1611675337283">
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1611675838399" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1611675838399">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611658211574" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1611675337283" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1611675337283">
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1611675838399" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1611675838399">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611658211575" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1611675337283" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1611675838399" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1611658211575">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
@@ -212,5 +241,13 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2061" y="164" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611654981947" />
+    <state x="646" y="343" key="VCS.ChangelistChooser" timestamp="1611675638399">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="646" y="343" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1611675638399" />
+    <state x="2364" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611714609344">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2364" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611714609344" />
   </component>
 </project>
