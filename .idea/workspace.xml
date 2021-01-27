@@ -6,15 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="357caa9f-e34f-4c10-97d0-cb754dee05c3" name="Default Changelist" comment="add trie and update gee">
-      <change afterPath="$PROJECT_DIR$/src/GeeWeb/router.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GeeWeb/trie.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base1/context.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeeWeb/context.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base1/gee.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeeWeb/gee.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base1/router.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base1/trie.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeeWeb/gee.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeeWeb/gee.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

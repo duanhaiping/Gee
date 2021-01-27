@@ -1,6 +1,7 @@
 package GeeWeb
 
 import (
+	"log"
 	"net/http"
 )
 
@@ -13,6 +14,18 @@ type HandlerFunc func(c *Context)
 type Engine struct {
 	// 路由映射表
 	router *router
+
+	//将Engine作为最顶层的分组，也就是说Engine拥有RouterGroup所有的能力
+
+	*RouterGroup
+	groups []*RouterGroup
+}
+
+type RouterGroup struct {
+	prefix      string
+	middlewares []HandlerFunc
+	parent      *RouterGroup
+	engine      *Engine
 }
 
 const (
@@ -26,7 +39,21 @@ const (
 创建实例
 */
 func New() *Engine {
-	return &Engine{router: newRouter()}
+	engine := &Engine{router: newRouter()}
+	engine.RouterGroup = &RouterGroup{engine: engine}
+	engine.groups = []*RouterGroup{engine.RouterGroup}
+	return engine
+}
+
+func (group *RouterGroup) Group(prefix string) *RouterGroup {
+	engine := group.engine
+	newGroup := &RouterGroup{
+		prefix: prefix,
+		parent: group,
+		engine: engine,
+	}
+	engine.groups = append(engine.groups, newGroup)
+	return newGroup
 }
 
 /*
@@ -34,25 +61,27 @@ func New() *Engine {
 method 为GET POST PUT DELETE PATCHD等
 为底层基础方法
 */
-func (engine *Engine) addRoute(method string, pattern string, handler HandlerFunc) {
-	engine.router.addRoute(method, pattern, handler)
+func (group *RouterGroup) addRoute(method string, comp string, handler HandlerFunc) {
+	pattern := group.prefix + comp
+	log.Print("route %4s -%s", method, pattern)
+	group.engine.router.addRoute(method, pattern, handler)
 }
 
 /*
 添加Get 请求路由
 */
-func (engine Engine) GET(pattern string, handler HandlerFunc) {
-	engine.addRoute(Method_Get, pattern, handler)
+func (group *RouterGroup) GET(pattern string, handler HandlerFunc) {
+	group.engine.addRoute(Method_Get, pattern, handler)
 }
 
-func (engine *Engine) POST(pattern string, handler HandlerFunc) {
-	engine.addRoute(Method_POST, pattern, handler)
+func (group *RouterGroup) POST(pattern string, handler HandlerFunc) {
+	group.engine.addRoute(Method_POST, pattern, handler)
 }
-func (engine Engine) DELETE(pattern string, handle HandlerFunc) {
-	engine.addRoute(Method_DELETE, pattern, handle)
+func (group *RouterGroup) DELETE(pattern string, handle HandlerFunc) {
+	group.engine.addRoute(Method_DELETE, pattern, handle)
 }
-func (engine Engine) PUT(pattern string, handle HandlerFunc) {
-	engine.addRoute(Method_PUT, pattern, handle)
+func (group *RouterGroup) PUT(pattern string, handle HandlerFunc) {
+	group.engine.addRoute(Method_PUT, pattern, handle)
 }
 
 func (engine Engine) Run(addr string) error {
