@@ -3,7 +3,7 @@ package GeeWeb
 import "strings"
 
 type node struct {
-	pattren  string
+	pattern  string
 	part     string
 	children []*node
 	isWild   bool
@@ -32,7 +32,7 @@ func (n *node) matchChildren(part string) []*node {
 
 func (n *node) insert(pattern string, parts []string, height int) {
 	if len(parts) == height {
-		n.pattren = pattern
+		n.pattern = pattern
 		return
 	}
 	part := parts[height]
@@ -47,7 +47,7 @@ func (n *node) insert(pattern string, parts []string, height int) {
 
 func (n *node) search(parts []string, height int) *node {
 	if len(parts) == height || strings.HasPrefix(n.part, "*") {
-		if n.pattren == "" {
+		if n.pattern == "" {
 			return nil
 		}
 		return n

@@ -5,9 +5,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="357caa9f-e34f-4c10-97d0-cb754dee05c3" name="Default Changelist" comment="add trie and update gee">
+    <list default="true" id="357caa9f-e34f-4c10-97d0-cb754dee05c3" name="Default Changelist" comment="add route group">
+      <change afterPath="$PROJECT_DIR$/src/GeeWeb/Logger.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeeWeb/context.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeeWeb/context.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeeWeb/gee.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeeWeb/gee.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeeWeb/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeeWeb/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeeWeb/trie.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeeWeb/trie.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +190,8 @@
     <MESSAGE value="add context" />
     <MESSAGE value="add trie" />
     <MESSAGE value="add trie and update gee" />
-    <option name="LAST_COMMIT_MESSAGE" value="add trie and update gee" />
+    <MESSAGE value="add route group" />
+    <option name="LAST_COMMIT_MESSAGE" value="add route group" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2014" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611561573444">
@@ -196,10 +202,10 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2311" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611643552008" />
-    <state width="509" height="466" key="DebuggerActiveHint" timestamp="1611728906263">
+    <state width="522" height="466" key="DebuggerActiveHint" timestamp="1611736415226">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="509" height="466" key="DebuggerActiveHint/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611728906263" />
+    <state width="522" height="466" key="DebuggerActiveHint/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611736415226" />
     <state x="2447" y="379" key="EnvironmentVariablesDialog" timestamp="1611642353266">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
@@ -212,54 +218,55 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2371" y="438" key="Github.CreateGistDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611655069087" />
-    <state width="1877" height="222" key="GridCell.Tab.0.bottom" timestamp="1611729248643">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1611738925583">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611729248643" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611738925583" />
     <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1611675838399" />
-    <state width="1877" height="222" key="GridCell.Tab.0.center" timestamp="1611729248643">
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1611738925583">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="222" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611729248643" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611738925583" />
     <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1611675838399" />
-    <state width="1877" height="222" key="GridCell.Tab.0.left" timestamp="1611729248643">
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1611738925583">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="222" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611729248643" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611738925583" />
     <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1611675838399" />
-    <state width="1877" height="222" key="GridCell.Tab.0.right" timestamp="1611729248643">
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1611738925583">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="222" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611729248643" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611738925583" />
     <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1611675838399" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1611728961000">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1611738929490">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611728961000" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1611728961000">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611738929490" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1611738929489">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611728961000" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1611728961000">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611738929489" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1611738929489">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611728961000" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1611728961000">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611738929489" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1611738929490">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611728961000" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611738929490" />
     <state x="2061" y="164" key="SettingsEditor" timestamp="1611654981947">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2061" y="164" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611654981947" />
-    <state x="646" y="343" key="VCS.ChangelistChooser" timestamp="1611675638399">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="646" y="343" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1611675638399" />
-    <state x="2152" y="252" key="Vcs.Push.Dialog.v2" timestamp="1611715341086">
+    <state x="2375" y="415" key="VCS.ChangelistChooser" timestamp="1611738768939">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2152" y="252" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611715341086" />
+    <state x="2375" y="415" key="VCS.ChangelistChooser/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611738768939" />
+    <state x="646" y="343" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1611675638399" />
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2" timestamp="1611739492935">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611739492935" />
     <state x="2364" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611715344205">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
@@ -273,9 +280,29 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/main.go</url>
-          <line>8</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/GeeWeb/gee.go</url>
+          <line>92</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/GeeWeb/router.go</url>
+          <line>73</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/GeeWeb/router.go</url>
+          <line>54</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/GeeWeb/router.go</url>
+          <line>79</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/GeeWeb/router.go</url>
+          <line>83</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

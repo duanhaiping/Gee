@@ -3,6 +3,7 @@ package GeeWeb
 import (
 	"log"
 	"net/http"
+	"strings"
 )
 
 /*
@@ -71,24 +72,34 @@ func (group *RouterGroup) addRoute(method string, comp string, handler HandlerFu
 添加Get 请求路由
 */
 func (group *RouterGroup) GET(pattern string, handler HandlerFunc) {
-	group.engine.addRoute(Method_Get, pattern, handler)
+	group.addRoute(Method_Get, pattern, handler)
 }
 
 func (group *RouterGroup) POST(pattern string, handler HandlerFunc) {
-	group.engine.addRoute(Method_POST, pattern, handler)
+	group.addRoute(Method_POST, pattern, handler)
 }
 func (group *RouterGroup) DELETE(pattern string, handle HandlerFunc) {
-	group.engine.addRoute(Method_DELETE, pattern, handle)
+	group.addRoute(Method_DELETE, pattern, handle)
 }
 func (group *RouterGroup) PUT(pattern string, handle HandlerFunc) {
-	group.engine.addRoute(Method_PUT, pattern, handle)
+	group.addRoute(Method_PUT, pattern, handle)
 }
 
-func (engine Engine) Run(addr string) error {
+func (engine *Engine) Run(addr string) error {
 	return http.ListenAndServe(addr, engine)
 }
 
-func (engine Engine) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (engine *Engine) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	var middlewares []HandlerFunc
+	for _, group := range engine.groups {
+		if strings.HasPrefix(r.URL.Path, group.prefix) {
+			middlewares = append(middlewares, group.middlewares...)
+		}
+	}
 	c := newContext(w, r)
+	c.handlers = middlewares
 	engine.router.handle(c)
+}
+func (group *RouterGroup) Use(middlewares ...HandlerFunc) {
+	group.middlewares = append(group.middlewares, middlewares...)
 }
