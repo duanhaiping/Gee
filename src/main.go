@@ -8,11 +8,15 @@ import (
 )
 
 func main() {
-	r := GeeWeb.New()
+	r := GeeWeb.Default()
 
 	r.Use(GeeWeb.Logger())
 	r.GET("/", func(c *GeeWeb.Context) {
 		c.HTML(http.StatusOK, "<h1>Hello Gee</h1>")
+	})
+	r.GET("/panic", func(c *GeeWeb.Context) {
+		names := []string{"geektutu"}
+		c.String(http.StatusOK, names[100])
 	})
 	v2 := r.Group("/v2")
 	v2.Use(onlyForV2()) // v2 group middleware
